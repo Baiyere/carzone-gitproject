@@ -9,6 +9,7 @@ class TeamAdmin(admin.ModelAdmin):
         return format_html('<img src="{}" width="40" style="border-radius: 50px" />'.format(object.photo.url))
 
     thumbnail.short_description = 'photo' ## adding heading to the thumbnail
+
     list_display = ('id', 'thumbnail', 'first_name', 'designation', 'created_date')
     list_display_links = ('id', 'thumbnail', 'first_name',)
     search_fields = ('first_name', 'last_name', 'designation')
